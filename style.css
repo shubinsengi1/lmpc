@@ -1,0 +1,108 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.homepage{
+    height: 100vh;
+    width: 100%;
+    /* background-image: url(images/edwin-andrade-6liebVeAfrY-unsplash.jpg); */
+ 
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    /* background-color: aqua; */
+}
+.video-back{
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+    background-image:linear-gradient(rgba(12,3,51,0.3), rgba(12,3,51,0.3)) ;
+}
+@media (min-aspect-ratio: 16/9){
+    .video-back{
+        width: 100%;
+        height: auto;
+    }
+}
+@media (max-aspect-ratio: 16/9){
+    .video-back{
+        width: auto;
+        height: 100%;
+    }
+}
+.logo{
+    color: white;
+    font-size: 50px;
+}
+.logo a{
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+}
+.navbar{
+    padding: 0 5%;
+    /* width: 80%; */
+    display: flex;
+    justify-content: space-between ;
+    align-items: center;
+    height: 15%;
+    background-color: black;
+  
+}
+.navbar ul li{
+    display: inline;
+    margin: 20px;
+   
+}
+.navbar ul li a{
+    color: white;
+    font-size: 20px;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+.verse{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+
+   margin-top:10%;
+
+}
+.verse h1{
+    font-size: 8rem;
+    font-weight: 800;
+}
+
+.verse p{
+    font-size: 30px;
+}
+.verse .btn {
+    margin-top: 60px;
+    display: flex;
+    gap: 80px;
+}
+.verse .btn a{
+    padding: 10px;
+    font-size: 30px;
+    width: 140px;
+    text-align: center;
+    color: white;
+    text-decoration: none;
+}
+.verse .btn a:hover{
+    background-color: rgb(30, 30, 201);
+}
+
+.visit{
+background-color: rgb(208, 148, 35) ;
+}
+
+.Services{
+background-color: rgb(86, 86, 212);
+}
+.Donate{
+    background-color: rgb(160, 142, 142) ;
+}
