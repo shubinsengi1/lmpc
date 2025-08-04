@@ -1,180 +1,130 @@
 # Living Mercy Presbyterian Church Website
 
-A modern, responsive church website built with HTML, CSS, and JavaScript. This website provides a comprehensive online presence for the church community with multiple pages showcasing services, ministries, events, and ways to connect.
+A professional church website with integrated donation processing, built with Node.js, Express, and Stripe.
 
-## 🌟 Features
+## 🚀 Quick Deploy
 
-### Core Pages
-- **Homepage** - Welcoming hero section with video background, mission highlights, service times, upcoming events, and ministry preview
-- **About Us** - Church history, mission & vision, leadership team, and beliefs
-- **Services** - Worship service details, weekly programs, ministries with tabbed interface, and special events
-- **Contact** - Contact information, interactive contact form, location details, and FAQ section
-- **Gallery** - Photo gallery with category filtering, video section, and photo sharing options
-- **Give** - Online giving information, donation methods, impact stories, and biblical perspective on tithing
+**Deploy your website in 5 minutes:**
 
-### Interactive Features
-- **Responsive Design** - Mobile-first approach with optimized layouts for all screen sizes
-- **Ministry Tabs** - Interactive tabbed interface for different ministry categories
-- **Gallery Filtering** - Filter photos by category (Worship, Events, Ministries, Community)
-- **Contact Form** - Validated contact form with success/error messaging
-- **Smooth Scrolling** - Enhanced navigation with smooth scrolling effects
-- **Mobile Navigation** - Collapsible mobile menu for better mobile experience
-- **Scroll Effects** - Dynamic navbar styling and back-to-top button
-- **Animation** - Intersection Observer for smooth element animations
+1. **Read**: `QUICK_DEPLOY.md` for immediate deployment
+2. **Run**: `./deploy.sh` to check your setup
+3. **Deploy**: Follow the guide to deploy on Render (free)
 
-## 🚀 Technology Stack
+## Features
 
-- **Frontend**: HTML5, CSS3, JavaScript (ES6+)
-- **Icons**: Font Awesome 6
-- **Typography**: Clean, modern web fonts
-- **Media**: Video background support, responsive images
-- **Performance**: Lazy loading, throttled scroll events, optimized animations
+- **Professional Design**: Modern, corporate-style design with clean typography
+- **Secure Donations**: Stripe-powered payment processing
+- **Email Receipts**: Automated tax-deductible donation receipts
+- **Database Tracking**: SQLite database for donation records
+- **Security**: Rate limiting, input validation, and secure payment handling
+- **Responsive**: Mobile-friendly design for all devices
 
-## 📁 Project Structure
+## Quick Start
 
-```
-/workspace/
-├── index.html          # Homepage
-├── about.html          # About Us page
-├── services.html       # Services & Ministries page
-├── contact.html        # Contact page
-├── gallery.html        # Photo Gallery page
-├── give.html          # Giving/Donation page
-├── style.css          # Main stylesheet
-├── home.js           # JavaScript functionality
-├── README.md         # Project documentation
-└── images/           # Image assets
-    ├── church.jpg
-    ├── edwin-andrade-6liebVeAfrY-unsplash.jpg
-    ├── cosmic-timetraveler-_R1cc2IHk70-unsplash (3).jpg
-    └── vecteezy_ai-generative-an-old-church-in-a-field-with-flowers_32167862.mp4
+### Prerequisites
+- Node.js (v16 or higher)
+- Stripe account for payment processing
+- Email service for receipts
+
+### Local Development
+```bash
+# Install dependencies
+npm install
+
+# Set up environment
+cp .env.example .env
+# Edit .env with your configuration
+
+# Start development server
+npm run dev
 ```
 
-## 🎨 Design Features
+### Deployment
+```bash
+# Check your setup
+./deploy.sh
 
-### Color Scheme
-- **Primary Blue**: #3498db
-- **Dark Blue**: #2c3e50
-- **Green Accent**: #27ae60
-- **Red Accent**: #e74c3c
-- **Light Gray**: #f8f9fa
-- **Text Gray**: #666
+# Follow deployment guide
+# See QUICK_DEPLOY.md for 5-minute deployment
+```
 
-### Typography
-- Clean, readable fonts with proper hierarchy
-- Responsive font sizes across devices
-- Icon integration with Font Awesome
+## Configuration
 
-### Layout
-- CSS Grid and Flexbox for modern layouts
-- Card-based design system
-- Consistent spacing and alignment
-- Smooth transitions and hover effects
+### Required Environment Variables
+- `STRIPE_PUBLISHABLE_KEY`: Your Stripe publishable key
+- `STRIPE_SECRET_KEY`: Your Stripe secret key
+- `STRIPE_WEBHOOK_SECRET`: Stripe webhook secret
+- `EMAIL_SERVICE`: Email service (gmail/smtp)
+- `EMAIL_USER`: Email username
+- `EMAIL_PASSWORD`: Email password
+- `FROM_EMAIL`: Sender email address
+- `ADMIN_EMAIL`: Admin notification email
 
-## 📱 Responsive Breakpoints
+### Stripe Setup
+1. Create account at [stripe.com](https://stripe.com)
+2. Get API keys from Dashboard → Developers → API Keys
+3. Set up webhook endpoint for donation processing
+4. Update `donation.js` with your publishable key
 
-- **Mobile**: 480px and below
-- **Tablet**: 768px and below
-- **Desktop**: 769px and above
+## File Structure
 
-## ⚡ Performance Optimizations
+```
+├── server.js              # Express server
+├── package.json           # Dependencies
+├── donation.js            # Frontend donation processing
+├── style.css              # Main stylesheet
+├── index.html             # Homepage
+├── give.html              # Donation page
+├── routes/                # API routes
+├── database/              # Database files
+├── utils/                 # Utility functions
+└── images/                # Website images
+```
 
-- **Lazy Loading**: Images load as they come into viewport
-- **Throttled Events**: Scroll events optimized for 60fps
-- **Efficient CSS**: Minimal reflows and repaints
-- **Optimized JavaScript**: Event delegation and efficient selectors
+## Deployment Options
 
-## 🔧 Setup Instructions
+### Free Platforms
+- **Render** (Recommended): Easy setup, free tier
+- **Railway**: Auto-detects Node.js, free tier
+- **Vercel**: Great for static sites
 
-1. **Clone or Download** the project files
-2. **Open** `index.html` in a web browser
-3. **Navigate** through the different pages using the navigation menu
-4. **Test** interactive features like the contact form and gallery filters
+### Paid Platforms
+- **Heroku**: Reliable, $7/month minimum
+- **DigitalOcean**: Full control, $5/month
+- **AWS**: Enterprise-grade, pay-per-use
 
-## 🌐 Browser Support
+## Security Features
 
-- Chrome (latest)
-- Firefox (latest)
-- Safari (latest)
-- Edge (latest)
-- Mobile browsers (iOS Safari, Chrome Mobile)
+- HTTPS enforcement
+- Rate limiting (100 requests/15min)
+- Input validation and sanitization
+- Secure headers (Helmet.js)
+- CORS protection
+- Stripe handles sensitive payment data
 
-## 📋 Features Breakdown
+## Testing
 
-### Homepage (`index.html`)
-- Hero section with video background and call-to-action buttons
-- Welcome section with church mission highlights
-- Service times display
-- Upcoming events showcase
-- Ministry preview cards
-- Comprehensive footer with contact info
+### Stripe Test Cards
+- **Success**: `4242 4242 4242 4242`
+- **Decline**: `4000 0000 0000 0002`
+- **3D Secure**: `4000 0000 0000 3220`
 
-### About Page (`about.html`)
-- Mission, Vision, and Values cards
-- Church history with image
-- Leadership team profiles
-- Core beliefs section
-- Join us call-to-action
+### Local Testing
+```bash
+npm start
+# Visit http://localhost:3000
+```
 
-### Services Page (`services.html`)
-- Detailed worship service information
-- Weekly programs grid
-- Interactive ministry tabs (Children, Youth, Adults, Outreach)
-- Special events timeline
-- "What to Expect" visitor information
+## Support
 
-### Contact Page (`contact.html`)
-- Contact information cards
-- Interactive contact form with validation
-- Staff directory
-- Map placeholder with location details
-- FAQ section for visitors
+- **Deployment**: See `DEPLOYMENT.md` for detailed instructions
+- **Setup**: See `SETUP.md` for configuration guide
+- **Quick Deploy**: See `QUICK_DEPLOY.md` for 5-minute deployment
 
-### Gallery Page (`gallery.html`)
-- Photo gallery with category filtering
-- Placeholder images with icons
-- Video section for sermons and events
-- Photo sharing call-to-action
+## License
 
-### Give Page (`give.html`)
-- Multiple giving options (Online, Text, Mail, Bank Transfer, In-Person)
-- Impact statistics and stories
-- Designated giving opportunities
-- Biblical perspective on tithing
-- Tax information
-
-## 💡 Customization
-
-### Adding New Content
-1. **Images**: Replace placeholder images in the `/images/` folder
-2. **Text**: Update content in HTML files
-3. **Colors**: Modify CSS custom properties in `style.css`
-4. **Features**: Extend JavaScript functionality in `home.js`
-
-### Church-Specific Customization
-- Update church name, address, and contact information
-- Replace leadership team information
-- Modify service times and program schedules
-- Add real photos to the gallery
-- Update giving information and payment methods
-
-## 🤝 Contributing
-
-This website template can be customized for any church or religious organization. Key areas for customization:
-
-1. **Branding**: Update colors, fonts, and imagery
-2. **Content**: Replace with church-specific information
-3. **Features**: Add or modify functionality as needed
-4. **Integrations**: Connect forms to email services or CRM systems
-
-## 📧 Contact
-
-For questions about this website template or customization services, please use the contact form on the website or reach out through the provided contact information.
-
-## 📜 License
-
-This project is open source and available for use by churches and religious organizations. Please maintain attribution where appropriate.
+MIT License - see LICENSE file for details.
 
 ---
 
-**Built with ❤️ for the church community**
+**Ready to deploy?** Start with `QUICK_DEPLOY.md` for immediate deployment!
