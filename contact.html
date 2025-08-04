@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/ec12938b52.js" crossorigin="anonymous"></script>
+    <title>Contact Us - Living Mercy Presbyterian Church</title>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="logo">
+            <a href="index.html">LMPC</a>
+        </div>
+        <div class="list">
+            <ul>
+                <li><a href="index.html"><i class="fa-solid fa-house"></i> Home</a></li>
+                <li><a href="about.html"><i class="fa-solid fa-address-card"></i> About Us</a></li>
+                <li><a href="contact.html" class="active">Contact Us</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="give.html"><i class="fa-solid fa-hand-holding-dollar"></i> Give</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="page-hero contact-hero">
+        <div class="hero-overlay"></div>
+        <div class="container">
+            <h1>Get in Touch</h1>
+            <p>We'd love to hear from you and answer any questions you might have</p>
+        </div>
+    </section>
+
+    <!-- Contact Information Section -->
+    <section class="contact-info">
+        <div class="container">
+            <div class="contact-grid">
+                <div class="contact-card">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <h3>Visit Us</h3>
+                    <p>123 Faith Street<br>Cityville, ST 12345</p>
+                    <p>Convenient parking available on-site</p>
+                </div>
+                
+                <div class="contact-card">
+                    <i class="fas fa-phone"></i>
+                    <h3>Call Us</h3>
+                    <p><strong>Main Office:</strong> (555) 123-4567</p>
+                    <p><strong>Prayer Line:</strong> (555) 123-4568</p>
+                    <p>Office Hours: Mon-Fri, 9 AM - 5 PM</p>
+                </div>
+                
+                <div class="contact-card">
+                    <i class="fas fa-envelope"></i>
+                    <h3>Email Us</h3>
+                    <p><strong>General:</strong> info@lmpc.org</p>
+                    <p><strong>Pastor:</strong> pastor@lmpc.org</p>
+                    <p><strong>Prayer Requests:</strong> prayer@lmpc.org</p>
+                </div>
+                
+                <div class="contact-card">
+                    <i class="fas fa-clock"></i>
+                    <h3>Service Times</h3>
+                    <p><strong>Sunday Worship:</strong><br>9:00 AM & 11:00 AM</p>
+                    <p><strong>Sunday School:</strong> 10:00 AM</p>
+                    <p><strong>Wednesday Bible Study:</strong> 7:00 PM</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Form Section -->
+    <section class="contact-form-section">
+        <div class="container">
+            <div class="form-content">
+                <div class="form-text">
+                    <h2>Send Us a Message</h2>
+                    <p>Whether you have questions about our services, want to learn more about our ministries, need prayer, or would like to get involved, we're here to help. Fill out the form and we'll get back to you as soon as possible.</p>
+                    
+                    <div class="staff-contact">
+                        <h3>Direct Staff Contact</h3>
+                        <div class="staff-list">
+                            <div class="staff-item">
+                                <strong>Rev. Dr. Michael Johnson</strong> - Senior Pastor<br>
+                                <i class="fas fa-envelope"></i> mjohnson@lmpc.org
+                            </div>
+                            <div class="staff-item">
+                                <strong>Rev. Sarah Williams</strong> - Family Ministries<br>
+                                <i class="fas fa-envelope"></i> swilliams@lmpc.org
+                            </div>
+                            <div class="staff-item">
+                                <strong>David Chen</strong> - Worship Director<br>
+                                <i class="fas fa-envelope"></i> dchen@lmpc.org
+                            </div>
+                            <div class="staff-item">
+                                <strong>Maria Rodriguez</strong> - Community Outreach<br>
+                                <i class="fas fa-envelope"></i> mrodriguez@lmpc.org
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="contact-form">
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <label for="name">Full Name *</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        
+                        <div class="form-row">
+                            <div class="form-group half">
+                                <label for="email">Email Address *</label>
+                                <input type="email" id="email" name="email" required>
+                            </div>
+                            <div class="form-group half">
+                                <label for="phone">Phone Number</label>
+                                <input type="tel" id="phone" name="phone">
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="subject">Subject *</label>
+                            <select id="subject" name="subject" required>
+                                <option value="">Please select a subject</option>
+                                <option value="general">General Information</option>
+                                <option value="prayer">Prayer Request</option>
+                                <option value="ministries">Ministries & Programs</option>
+                                <option value="pastoral">Pastoral Care</option>
+                                <option value="volunteer">Volunteer Opportunities</option>
+                                <option value="events">Events & Activities</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="message">Message *</label>
+                            <textarea id="message" name="message" rows="6" required placeholder="Please share your message, questions, or prayer requests..."></textarea>
+                        </div>
+                        
+                        <div class="form-group checkbox-group">
+                            <label class="checkbox-label">
+                                <input type="checkbox" id="updates" name="updates">
+                                <span class="checkmark"></span>
+                                I'd like to receive updates about church events and activities
+                            </label>
+                        </div>
+                        
+                        <div class="form-group checkbox-group">
+                            <label class="checkbox-label">
+                                <input type="checkbox" id="visit" name="visit">
+                                <span class="checkmark"></span>
+                                I'm interested in visiting and would like someone to contact me
+                            </label>
+                        </div>
+                        
+                        <button type="submit" class="btn btn-primary">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Map Section -->
+    <section class="map-section">
+        <div class="container">
+            <h2>Find Us</h2>
+            <div class="map-container">
+                <div class="map-placeholder">
+                    <i class="fas fa-map-marked-alt"></i>
+                    <h3>Interactive Map</h3>
+                    <p>123 Faith Street, Cityville, ST 12345</p>
+                    <p>Located in the heart of downtown Cityville, with easy access from major highways and public transportation.</p>
+                    <div class="directions">
+                        <a href="#" class="btn btn-secondary">Get Directions</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="location-details">
+                <div class="detail-card">
+                    <i class="fas fa-car"></i>
+                    <h4>Parking</h4>
+                    <p>Free parking available in our church lot. Accessible parking spaces are located near the main entrance.</p>
+                </div>
+                <div class="detail-card">
+                    <i class="fas fa-wheelchair"></i>
+                    <h4>Accessibility</h4>
+                    <p>Our building is fully wheelchair accessible with ramps, elevators, and accessible restrooms.</p>
+                </div>
+                <div class="detail-card">
+                    <i class="fas fa-bus"></i>
+                    <h4>Public Transit</h4>
+                    <p>Bus routes 12 and 34 stop within two blocks of the church. The Metro station is a 10-minute walk.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq-section">
+        <div class="container">
+            <h2>Frequently Asked Questions</h2>
+            <div class="faq-grid">
+                <div class="faq-item">
+                    <h4>What should I expect when visiting?</h4>
+                    <p>Come as you are! Our services are welcoming and casual. Arrive a few minutes early to find parking and get settled. We'll have friendly greeters to help you feel at home.</p>
+                </div>
+                <div class="faq-item">
+                    <h4>What about my children?</h4>
+                    <p>Children are always welcome in our services. We also offer nursery care for infants and toddlers, and children's church during the sermon for elementary-aged kids.</p>
+                </div>
+                <div class="faq-item">
+                    <h4>Do I need to bring anything?</h4>
+                    <p>No need to bring anything - Bibles are provided in the pews, and we'll provide any materials needed for worship or teaching.</p>
+                </div>
+                <div class="faq-item">
+                    <h4>How can I get involved?</h4>
+                    <p>There are many ways to get connected! Talk to our pastors after service, fill out a connection card, or contact our office to learn about volunteer opportunities and small groups.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Living Mercy Presbyterian Church</h3>
+                    <p>Growing in Grace, Serving in Love</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h3>Contact Info</h3>
+                    <p><i class="fas fa-map-marker-alt"></i> 123 Faith Street, Cityville, ST 12345</p>
+                    <p><i class="fas fa-phone"></i> (555) 123-4567</p>
+                    <p><i class="fas fa-envelope"></i> info@lmpc.org</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Service Times</h3>
+                    <p>Sunday Worship: 9:00 AM & 11:00 AM</p>
+                    <p>Sunday School: 10:00 AM</p>
+                    <p>Wednesday Bible Study: 7:00 PM</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Living Mercy Presbyterian Church. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="home.js"></script>
+</body>
+</html>

@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/ec12938b52.js" crossorigin="anonymous"></script>
+    <title>Gallery - Living Mercy Presbyterian Church</title>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="logo">
+            <a href="index.html">LMPC</a>
+        </div>
+        <div class="list">
+            <ul>
+                <li><a href="index.html"><i class="fa-solid fa-house"></i> Home</a></li>
+                <li><a href="about.html"><i class="fa-solid fa-address-card"></i> About Us</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="gallery.html" class="active">Gallery</a></li>
+                <li><a href="give.html"><i class="fa-solid fa-hand-holding-dollar"></i> Give</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="page-hero gallery-hero">
+        <div class="hero-overlay"></div>
+        <div class="container">
+            <h1>Our Community in Pictures</h1>
+            <p>Celebrating life, faith, and fellowship together at LMPC</p>
+        </div>
+    </section>
+
+    <!-- Gallery Categories -->
+    <section class="gallery-categories">
+        <div class="container">
+            <div class="category-filters">
+                <button class="filter-btn active" data-filter="all">All Photos</button>
+                <button class="filter-btn" data-filter="worship">Worship</button>
+                <button class="filter-btn" data-filter="events">Events</button>
+                <button class="filter-btn" data-filter="ministries">Ministries</button>
+                <button class="filter-btn" data-filter="community">Community</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Photo Gallery -->
+    <section class="photo-gallery">
+        <div class="container">
+            <div class="gallery-grid">
+                <!-- Worship Photos -->
+                <div class="gallery-item" data-category="worship">
+                    <div class="gallery-image">
+                        <img src="images/church.jpg" alt="Sunday Worship Service">
+                        <div class="gallery-overlay">
+                            <h3>Sunday Worship</h3>
+                            <p>Our congregation gathered for Sunday morning worship</p>
+                            <i class="fas fa-search-plus"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-category="worship">
+                    <div class="gallery-image">
+                        <div class="placeholder-image">
+                            <i class="fas fa-music"></i>
+                            <h4>Worship Team</h4>
+                        </div>
+                        <div class="gallery-overlay">
+                            <h3>Contemporary Worship</h3>
+                            <p>Our worship team leading praise and worship</p>
+                            <i class="fas fa-search-plus"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-category="worship">
+                    <div class="gallery-image">
+                        <div class="placeholder-image">
+                            <i class="fas fa-cross"></i>
+                            <h4>Communion</h4>
+                        </div>
+                        <div class="gallery-overlay">
+                            <h3>Communion Sunday</h3>
+                            <p>Celebrating the Lord's Supper together</p>
+                            <i class="fas fa-search-plus"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Events Photos -->
+                <div class="gallery-item" data-category="events">
+                    <div class="gallery-image">
+                        <div class="placeholder-image">
+                            <i class="fas fa-birthday-cake"></i>
+                            <h4>Easter</h4>
+                        </div>
+                        <div class="gallery-overlay">
+                            <h3>Easter Celebration</h3>
+                            <p>Celebrating the resurrection of our Lord</p>
+                            <i class="fas fa-search-plus"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-category="events">
+                    <div class="gallery-image">
+                        <div class="placeholder-image">
+                            <i class="fas fa-tree"></i>
+                            <h4>Christmas</h4>
+                        </div>
+                        <div class="gallery-overlay">
+                            <h3>Christmas Program</h3>
+                            <p>Our annual Christmas Eve service</p>
+                            <i class="fas fa-search-plus"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-category="events">
+                    <div class="gallery-image">
+                        <div class="placeholder-image">
+                            <i class="fas fa-apple-alt"></i>
+                            <h4>Harvest</h4>
+                        </div>
+                        <div class="gallery-overlay">
+                            <h3>Harvest Festival</h3>
+                            <p>Community celebration and fellowship</p>
+                            <i class="fas fa-search-plus"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Ministries Photos -->
+                <div class="gallery-item" data-category="ministries">
+                    <div class="gallery-image">
+                        <div class="placeholder-image">
+                            <i class="fas fa-child"></i>
+                            <h4>Children</h4>
+                        </div>
+                        <div class="gallery-overlay">
+                            <h3>Children's Ministry</h3>
+                            <p>Kids learning about God's love</p>
+                            <i class="fas fa-search-plus"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-category="ministries">
+                    <div class="gallery-image">
+                        <div class="placeholder-image">
+                            <i class="fas fa-users"></i>
+                            <h4>Youth</h4>
+                        </div>
+                        <div class="gallery-overlay">
+                            <h3>Youth Group</h3>
+                            <p>Teenagers growing in faith together</p>
+                            <i class="fas fa-search-plus"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-category="ministries">
+                    <div class="gallery-image">
+                        <div class="placeholder-image">
+                            <i class="fas fa-book"></i>
+                            <h4>VBS</h4>
+                        </div>
+                        <div class="gallery-overlay">
+                            <h3>Vacation Bible School</h3>
+                            <p>Summer fun with Bible learning</p>
+                            <i class="fas fa-search-plus"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Community Photos -->
+                <div class="gallery-item" data-category="community">
+                    <div class="gallery-image">
+                        <div class="placeholder-image">
+                            <i class="fas fa-hands-helping"></i>
+                            <h4>Service</h4>
+                        </div>
+                        <div class="gallery-overlay">
+                            <h3>Community Service</h3>
+                            <p>Serving our neighbors in need</p>
+                            <i class="fas fa-search-plus"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-category="community">
+                    <div class="gallery-image">
+                        <div class="placeholder-image">
+                            <i class="fas fa-seedling"></i>
+                            <h4>Garden</h4>
+                        </div>
+                        <div class="gallery-overlay">
+                            <h3>Community Garden</h3>
+                            <p>Growing food for our food pantry</p>
+                            <i class="fas fa-search-plus"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-category="community">
+                    <div class="gallery-image">
+                        <div class="placeholder-image">
+                            <i class="fas fa-globe-americas"></i>
+                            <h4>Missions</h4>
+                        </div>
+                        <div class="gallery-overlay">
+                            <h3>Mission Trip</h3>
+                            <p>Serving communities around the world</p>
+                            <i class="fas fa-search-plus"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-category="events">
+                    <div class="gallery-image">
+                        <div class="placeholder-image">
+                            <i class="fas fa-graduation-cap"></i>
+                            <h4>Baptism</h4>
+                        </div>
+                        <div class="gallery-overlay">
+                            <h3>Baptism Service</h3>
+                            <p>Celebrating new life in Christ</p>
+                            <i class="fas fa-search-plus"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-category="community">
+                    <div class="gallery-image">
+                        <div class="placeholder-image">
+                            <i class="fas fa-utensils"></i>
+                            <h4>Fellowship</h4>
+                        </div>
+                        <div class="gallery-overlay">
+                            <h3>Fellowship Dinner</h3>
+                            <p>Sharing meals and building relationships</p>
+                            <i class="fas fa-search-plus"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-category="ministries">
+                    <div class="gallery-image">
+                        <div class="placeholder-image">
+                            <i class="fas fa-female"></i>
+                            <h4>Women</h4>
+                        </div>
+                        <div class="gallery-overlay">
+                            <h3>Women's Ministry</h3>
+                            <p>Ladies gathering for Bible study and fellowship</p>
+                            <i class="fas fa-search-plus"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-category="ministries">
+                    <div class="gallery-image">
+                        <div class="placeholder-image">
+                            <i class="fas fa-male"></i>
+                            <h4>Men</h4>
+                        </div>
+                        <div class="gallery-overlay">
+                            <h3>Men's Breakfast</h3>
+                            <p>Men connecting over food and faith</p>
+                            <i class="fas fa-search-plus"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Video Section -->
+    <section class="video-section">
+        <div class="container">
+            <h2>Recent Sermons & Events</h2>
+            <div class="video-grid">
+                <div class="video-item">
+                    <div class="video-placeholder">
+                        <i class="fas fa-play-circle"></i>
+                        <h4>Sunday Sermon</h4>
+                        <p>Latest message from Pastor Mike</p>
+                    </div>
+                </div>
+                <div class="video-item">
+                    <div class="video-placeholder">
+                        <i class="fas fa-play-circle"></i>
+                        <h4>Youth Testimony</h4>
+                        <p>A young person shares their faith story</p>
+                    </div>
+                </div>
+                <div class="video-item">
+                    <div class="video-placeholder">
+                        <i class="fas fa-play-circle"></i>
+                        <h4>Worship Highlights</h4>
+                        <p>Beautiful moments from our worship services</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Share Section -->
+    <section class="share-section">
+        <div class="container">
+            <div class="share-content">
+                <h2>Share Your Photos</h2>
+                <p>Have photos from church events you'd like to share? We'd love to feature them in our gallery!</p>
+                <div class="share-options">
+                    <a href="contact.html" class="btn btn-primary">Submit Photos</a>
+                    <div class="social-share">
+                        <p>Follow us on social media:</p>
+                        <div class="social-links">
+                            <a href="#"><i class="fab fa-facebook"></i></a>
+                            <a href="#"><i class="fab fa-instagram"></i></a>
+                            <a href="#"><i class="fab fa-youtube"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Living Mercy Presbyterian Church</h3>
+                    <p>Growing in Grace, Serving in Love</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h3>Contact Info</h3>
+                    <p><i class="fas fa-map-marker-alt"></i> 123 Faith Street, Cityville, ST 12345</p>
+                    <p><i class="fas fa-phone"></i> (555) 123-4567</p>
+                    <p><i class="fas fa-envelope"></i> info@lmpc.org</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Service Times</h3>
+                    <p>Sunday Worship: 9:00 AM & 11:00 AM</p>
+                    <p>Sunday School: 10:00 AM</p>
+                    <p>Wednesday Bible Study: 7:00 PM</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Living Mercy Presbyterian Church. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="home.js"></script>
+</body>
+</html>
