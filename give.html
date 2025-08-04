@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <script src="https://kit.fontawesome.com/ec12938b52.js" crossorigin="anonymous"></script>
+    <script src="payment.js"></script>
     <title>Give - Living Mercy Presbyterian Church</title>
 </head>
 <body>
@@ -80,7 +81,7 @@
                             <li>Immediate confirmation</li>
                             <li>Tax receipt automatically generated</li>
                         </ul>
-                        <a href="#" class="btn btn-primary">Give Online Now</a>
+                        <a href="#donation-form-section" class="btn btn-primary">Give Online Now</a>
                     </div>
                 </div>
 
@@ -292,6 +293,35 @@
         </div>
     </section>
 
+    <!-- Online Donation Form Section -->
+    <section id="donation-form-section" class="donation-form-section">
+        <div class="container">
+            <h2>Online Donation</h2>
+            <p>Make a secure donation using our online payment system powered by Stripe</p>
+            
+            <!-- Donation form will be inserted here by JavaScript -->
+            <div id="donation-form-container"></div>
+            
+            <div class="payment-security">
+                <div class="security-badges">
+                    <div class="security-item">
+                        <i class="fas fa-lock"></i>
+                        <span>SSL Encrypted</span>
+                    </div>
+                    <div class="security-item">
+                        <i class="fas fa-shield-alt"></i>
+                        <span>Secure Payments</span>
+                    </div>
+                    <div class="security-item">
+                        <i class="fas fa-credit-card"></i>
+                        <span>All Major Cards</span>
+                    </div>
+                </div>
+                <p class="security-note">Your payment information is processed securely through Stripe and never stored on our servers.</p>
+            </div>
+        </div>
+    </section>
+
     <!-- Footer -->
     <footer class="footer">
         <div class="container">
@@ -325,5 +355,24 @@
     </footer>
 
     <script src="home.js"></script>
+    <script>
+        // Initialize donation form when page loads
+        document.addEventListener('DOMContentLoaded', function() {
+            // Wait a bit for the payment system to initialize
+            setTimeout(() => {
+                if (window.churchPayments && window.churchPayments.isInitialized) {
+                    window.churchPayments.createDonationForm('donation-form-container');
+                } else {
+                    console.log('Waiting for payment system to initialize...');
+                    // Try again after a short delay
+                    setTimeout(() => {
+                        if (window.churchPayments) {
+                            window.churchPayments.createDonationForm('donation-form-container');
+                        }
+                    }, 2000);
+                }
+            }, 1000);
+        });
+    </script>
 </body>
 </html>
