@@ -118,6 +118,14 @@ p {
     text-decoration: none;
     font-weight: 700;
     letter-spacing: -0.025em;
+    display: flex;
+    align-items: center;
+}
+
+.logo-image {
+    height: 50px;
+    width: auto;
+    display: block;
 }
 
 .navbar ul {
@@ -2061,6 +2069,10 @@ section {
     
     .logo {
         font-size: 2rem;
+    }
+    
+    .logo-image {
+        height: 35px;
     }
     
     .page-hero h1 {
