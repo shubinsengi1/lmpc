@@ -111,6 +111,8 @@ p {
     color: var(--neutral-900);
     font-size: 1.75rem;
     font-weight: 700;
+    display: flex;
+    align-items: center;
 }
 
 .logo a {
@@ -118,6 +120,21 @@ p {
     text-decoration: none;
     font-weight: 700;
     letter-spacing: -0.025em;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.logo img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.logo span {
+    font-size: 1.5rem;
+    font-weight: 700;
 }
 
 .navbar ul {
@@ -2061,6 +2078,15 @@ section {
     
     .logo {
         font-size: 2rem;
+    }
+    
+    .logo img {
+        width: 40px;
+        height: 40px;
+    }
+    
+    .logo span {
+        font-size: 1.25rem;
     }
     
     .page-hero h1 {
