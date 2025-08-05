@@ -1,0 +1,71 @@
+<svg width="200" height="200" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+  <!-- Outer red border -->
+  <circle cx="100" cy="100" r="95" fill="#dc2626" stroke="#dc2626" stroke-width="2"/>
+  
+  <!-- Gray ring with improved text visibility -->
+  <circle cx="100" cy="100" r="85" fill="#6b7280"/>
+  
+  <!-- Blue inner border -->
+  <circle cx="100" cy="100" r="75" fill="#2563eb" stroke="#2563eb" stroke-width="2"/>
+  
+  <!-- Green innermost border -->
+  <circle cx="100" cy="100" r="65" fill="#16a34a" stroke="#16a34a" stroke-width="2"/>
+  
+  <!-- White background for central content -->
+  <circle cx="100" cy="100" r="55" fill="white"/>
+  
+  <!-- Curved text on gray ring - improved visibility with white text -->
+  <defs>
+    <path id="topArc" d="M 30 100 A 70 70 0 0 1 170 100"/>
+    <path id="bottomArc" d="M 170 100 A 70 70 0 0 1 30 100"/>
+  </defs>
+  
+  <!-- Top text: Light Mission -->
+  <text font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="white">
+    <textPath href="#topArc" startOffset="25%">
+      LIGHT MISSION
+    </textPath>
+  </text>
+  
+  <!-- Bottom text: Pentecostal Church -->
+  <text font-family="Arial, sans-serif" font-size="10" font-weight="bold" fill="white">
+    <textPath href="#bottomArc" startOffset="20%">
+      PENTECOSTAL CHURCH
+    </textPath>
+  </text>
+  
+  <!-- Central imagery -->
+  <!-- Globe -->
+  <circle cx="100" cy="85" r="25" fill="#3b82f6" stroke="#1e40af" stroke-width="1"/>
+  <!-- Globe grid lines -->
+  <path d="M 75 85 L 125 85" stroke="#1e40af" stroke-width="0.5" fill="none"/>
+  <path d="M 100 60 L 100 110" stroke="#1e40af" stroke-width="0.5" fill="none"/>
+  <ellipse cx="100" cy="85" rx="25" ry="8" fill="none" stroke="#1e40af" stroke-width="0.5"/>
+  
+  <!-- Cross above globe -->
+  <rect x="95" y="55" width="10" height="20" fill="#1f2937"/>
+  <rect x="88" y="62" width="24" height="6" fill="#1f2937"/>
+  
+  <!-- Dove above cross -->
+  <g transform="translate(100, 45)">
+    <!-- Dove body -->
+    <ellipse cx="0" cy="0" rx="8" ry="4" fill="white" stroke="#6b7280" stroke-width="0.5"/>
+    <!-- Wings -->
+    <path d="M -8 0 Q -12 -3 -8 -6 Q -4 -3 -8 0" fill="white" stroke="#6b7280" stroke-width="0.5"/>
+    <path d="M 8 0 Q 12 -3 8 -6 Q 4 -3 8 0" fill="white" stroke="#6b7280" stroke-width="0.5"/>
+    <!-- Light rays -->
+    <path d="M -2 -8 L -1 -12" stroke="#fbbf24" stroke-width="1" fill="none"/>
+    <path d="M 0 -8 L 0 -12" stroke="#fbbf24" stroke-width="1" fill="none"/>
+    <path d="M 2 -8 L 1 -12" stroke="#fbbf24" stroke-width="1" fill="none"/>
+  </g>
+  
+  <!-- Bible below globe -->
+  <rect x="88" y="105" width="24" height="16" fill="#1f2937" rx="2"/>
+  <rect x="90" y="107" width="20" height="12" fill="#dc2626"/>
+  <text x="100" y="115" text-anchor="middle" font-family="Arial, sans-serif" font-size="6" font-weight="bold" fill="white">HOLY BIBLE</text>
+  
+  <!-- Bottom text in central area -->
+  <text x="100" y="135" text-anchor="middle" font-family="Arial, sans-serif" font-size="8" font-weight="bold" fill="#1f2937">LMPC</text>
+  <text x="100" y="145" text-anchor="middle" font-family="Arial, sans-serif" font-size="6" font-weight="bold" fill="#1f2937">ATLANTA, GA</text>
+  <text x="100" y="152" text-anchor="middle" font-family="Arial, sans-serif" font-size="6" font-weight="bold" fill="#1f2937">USA</text>
+</svg>
