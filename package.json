@@ -1,11 +1,15 @@
 {
-  "name": "lmpc-website",
+  "name": "lmpca-website",
   "version": "1.0.0",
-  "description": "Living Mercy Presbyterian Church Website with Donation Processing",
+  "description": "Light Mission Pentecostal Church of Atlanta Website with Donation Processing",
   "main": "server.js",
   "scripts": {
     "start": "node server.js",
     "dev": "nodemon server.js",
+    "setup": "node setup-payment-system.js",
+    "test-stripe": "node -e \"console.log('Testing Stripe configuration...'); require('dotenv').config(); const stripe = require('stripe')(process.env.STRIPE_SECRET_KEY); stripe.balance.retrieve().then(balance => console.log('✅ Stripe connection successful!', balance)).catch(err => console.error('❌ Stripe connection failed:', err.message));\"",
+    "test-email": "node -e \"require('./utils/email').testEmailConfig().then(result => console.log(result ? '✅ Email configuration valid' : '❌ Email configuration failed'));\"",
+    "create-db": "node -e \"require('./database/init').initDatabase().then(() => console.log('✅ Database initialized')).catch(err => console.error('❌ Database error:', err));\"",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [
@@ -13,7 +17,7 @@
     "donations",
     "website"
   ],
-  "author": "LMPC",
+  "author": "LMPCA",
   "license": "MIT",
   "dependencies": {
     "bcrypt": "^5.1.1",

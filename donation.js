@@ -282,8 +282,9 @@ function showSuccessModal(donationId) {
     donationModal.style.display = 'none';
     successModal.style.display = 'flex';
     
-    document.getElementById('success-donation-id').textContent = `#LMPC-${donationId}`;
+    document.getElementById('success-donation-id').textContent = `#LMPCA-${donationId}`;
     document.getElementById('success-amount').textContent = `$${currentAmount.toFixed(2)}`;
+    document.getElementById('success-designation').textContent = document.getElementById('designation').value;
 }
 
 function setLoading(loading) {

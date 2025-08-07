@@ -102,27 +102,16 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Mobile Navigation Toggle
     const navbar = document.querySelector('.navbar');
-    const navList = document.querySelector('.navbar .list ul');
-    
-    // Create mobile menu button
-    const mobileMenuBtn = document.createElement('button');
-    mobileMenuBtn.innerHTML = '<i class="fas fa-bars"></i>';
-    mobileMenuBtn.className = 'mobile-menu-btn';
-    mobileMenuBtn.style.cssText = `
-        display: none;
-        background: none;
-        border: none;
-        color: white;
-        font-size: 1.5rem;
-        cursor: pointer;
-    `;
-    
-    navbar.appendChild(mobileMenuBtn);
+    const navMenu = document.querySelector('.nav-menu');
+    const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
     
     // Toggle mobile menu
-    mobileMenuBtn.addEventListener('click', function() {
-        navList.classList.toggle('mobile-open');
-    });
+    if (mobileMenuToggle && navMenu) {
+        mobileMenuToggle.addEventListener('click', function() {
+            navMenu.classList.toggle('mobile-open');
+            this.classList.toggle('active');
+        });
+    }
 
     // Add scroll effect to navbar
     let lastScrollTop = 0;
@@ -172,31 +161,33 @@ document.addEventListener('DOMContentLoaded', function() {
         }
         
         @media (max-width: 768px) {
-            .mobile-menu-btn {
-                display: block !important;
-            }
-            
-            .navbar .list ul {
-                position: absolute;
-                top: 100%;
+            .nav-menu {
+                position: fixed;
+                top: 80px;
                 left: 0;
                 right: 0;
-                background: rgba(0, 0, 0, 0.95);
-                flex-direction: column;
+                background: rgba(255, 255, 255, 0.98);
+                backdrop-filter: blur(20px);
                 padding: 20px;
                 transform: translateY(-100%);
                 opacity: 0;
                 visibility: hidden;
                 transition: all 0.3s ease;
+                border-bottom: 1px solid var(--neutral-200);
             }
             
-            .navbar .list ul.mobile-open {
+            .nav-menu.mobile-open {
                 transform: translateY(0);
                 opacity: 1;
                 visibility: visible;
             }
             
-            .navbar .list ul li {
+            .nav-menu ul {
+                flex-direction: column;
+                gap: 0;
+            }
+            
+            .nav-menu ul li {
                 margin: 10px 0;
             }
         }

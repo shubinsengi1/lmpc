@@ -65,7 +65,7 @@ router.post('/create-payment-intent', validateDonationData, async (req, res) => 
                 isRecurring: isRecurring ? 'true' : 'false'
             },
             receipt_email: donorInfo.email,
-            description: `Donation to Living Mercy Presbyterian Church - ${designation || 'General Fund'}`
+            description: `Donation to Light Mission Pentecostal Church of Atlanta - ${designation || 'General Fund'}`
         });
         
         res.json({

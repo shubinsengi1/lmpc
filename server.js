@@ -62,7 +62,7 @@ app.get('/api/health', (req, res) => {
     res.json({ 
         status: 'OK', 
         timestamp: new Date().toISOString(),
-        service: 'LMPC Donation Service'
+        service: 'LMPCA Donation Service'
     });
 });
 
@@ -112,7 +112,7 @@ async function startServer() {
         console.log('Database initialized successfully');
         
         app.listen(PORT, () => {
-            console.log(`LMPC Server running on http://localhost:${PORT}`);
+            console.log(`LMPCA Server running on http://localhost:${PORT}`);
             console.log(`Environment: ${process.env.NODE_ENV || 'development'}`);
         });
     } catch (error) {
